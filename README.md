@@ -52,6 +52,7 @@ The CharityRewards smart contract has tremendous potential for expansion and enh
 
 This roadmap positions CharityRewards to become a **leading platform in decentralized philanthropy**, ultimately creating a global network of incentivized charitable giving that benefits both society and individual participants.
 transaction Hash:0x7fad9a8b22ccc61b4143759ff730e451ab2073e6568364ce40106a201ee6ab9c
-![Uploading Screenshot 2025-09-16 at 2.24.53 PM.png…]()
+
+<img width="1280" height="710" alt="Screenshot 2025-09-16 at 2 34 19 PM" src="https://github.com/user-attachments/assets/ef514618-967f-474c-8037-c87f681342eb" />
 
 
