@@ -1,0 +1,15 @@
+[package]
+name = "Charity_events"
+version = "1.0.0"
+authors = []
+
+[addresses]
+charity_rewards ="0x5945c535f80817c90a1925138ff6a872a4d9fbd790e93b4f9b4cb763b9caa2e7"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
