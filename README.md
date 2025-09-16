@@ -12,7 +12,8 @@ This system promotes increased participation in charitable activities by providi
 
 ## Vision
 
-Our vision is to create a **sustainable ecosystem of charitable giving** where blockchain technology bridges the gap between altruistic intentions and practical incentives. We envision a world where:
+Our vision is to create a **sustainable ecosystem of charitable giving** where blockchain technology bridges the gap between altruistic intentions and practical incentives. We envision a world where:![Uploading Screenshot 2025-09-16 at 2.35.04 PM.png…]()
+
 
 - **Charitable giving becomes more appealing** through transparent reward mechanisms
 - **Donors feel valued and motivated** to contribute regularly to social causes
@@ -55,4 +56,6 @@ transaction Hash:0x7fad9a8b22ccc61b4143759ff730e451ab2073e6568364ce40106a201ee6a
 
 <img width="1280" height="710" alt="Screenshot 2025-09-16 at 2 34 19 PM" src="https://github.com/user-attachments/assets/ef514618-967f-474c-8037-c87f681342eb" />
 
+<img width="1280" height="717" alt="Screenshot 2025-09-16 at 2 35 21 PM" src="https://github.com/user-attachments/assets/ffb369d4-cf5b-460a-9a42-044bb4a92b22" />
+<img width="1280" height="722" alt="Screenshot 2025-09-16 at 2 35 40 PM" src="https://github.com/user-attachments/assets/c5cab05d-5a2c-45a9-861b-f456f38d24bf" />
 
