@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@2",
+    "@aptos-labs/ts-sdk": "npm:@aptos-labs/ts-sdk@1.11.0"
+  }
+}

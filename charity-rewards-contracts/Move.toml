@@ -1,0 +1,10 @@
+[package]
+name = "CharityRewards"
+version = "1.0.0"
+
+[addresses]
+charity_addr = "0xe2fb002d94700d394877fcbaaf82bcfb53c6ce6b902d32c4bdea3ccf15f4ba62"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "mainnet" }
+AptosTokenObjects = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-token-objects/", rev = "mainnet" }

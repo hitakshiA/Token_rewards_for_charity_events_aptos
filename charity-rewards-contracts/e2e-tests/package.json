@@ -1,0 +1,16 @@
+{
+  "name": "charity-rewards-e2e-tests",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.11.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "@types/node-fetch": "^2.6.9",
+    "node-fetch": "^2.6.7",
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "test": "tsx e2e_test.ts"
+  }
+}

@@ -1,0 +1,426 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CharityRewards: The Digital Garden of Giving Design System */
+/* All colors, gradients, fonts, and animations defined here */
+
+@layer base {
+  :root {
+    /* Core Color Palette - Soft Pink Garden Theme */
+    --petal-pink: 330 100% 98%;
+    --blush-cream: 38 100% 98%;
+    --rose-dark: 320 32% 27%;
+    --vibrant-rose: 330 100% 71%;
+    --rose-light: 350 88% 87%;
+    --mint-soft: 168 40% 92%;
+    
+    /* Shadcn Token Mapping */
+    --background: var(--petal-pink);
+    --foreground: var(--rose-dark);
+    --card: var(--blush-cream);
+    --card-foreground: var(--rose-dark);
+    --popover: var(--blush-cream);
+    --popover-foreground: var(--rose-dark);
+    --primary: var(--vibrant-rose);
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 330 100% 80%;
+    --secondary: var(--rose-light);
+    --secondary-foreground: var(--rose-dark);
+    --muted: var(--rose-light);
+    --muted-foreground: 320 20% 55%;
+    --accent: var(--vibrant-rose);
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: var(--rose-light);
+    --input: var(--rose-light);
+    --ring: var(--vibrant-rose);
+    --radius: 1rem;
+
+    /* Custom Garden Design Tokens */
+    --garden-glow: 330 100% 71%;
+    --garden-shimmer: 350 88% 87%;
+    --garden-success: var(--mint-soft);
+    --garden-text-accent: 320 45% 45%;
+    
+    /* Gradients */
+    --gradient-garden: linear-gradient(135deg, hsl(var(--petal-pink)), hsl(var(--blush-cream)));
+    --gradient-rose: linear-gradient(135deg, hsl(var(--vibrant-rose)), hsl(330 100% 80%));
+    --gradient-glow: radial-gradient(circle, hsl(var(--vibrant-rose) / 0.3), transparent);
+    
+    /* Shadows */
+    --shadow-garden: 0 20px 60px -20px hsl(var(--rose-light) / 0.5);
+    --shadow-glow: 0 0 20px hsl(var(--vibrant-rose) / 0.4);
+    --shadow-soft: 0 8px 32px hsl(var(--rose-light) / 0.3);
+    
+    /* Animations */
+    --transition-garden: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.3s ease-out;
+  }
+
+  .dark {
+    /* Dark mode with pink aesthetics */
+    --background: 320 20% 8%;
+    --foreground: 330 100% 95%;
+    --card: 320 18% 12%;
+    --card-foreground: 330 100% 95%;
+    --popover: 320 18% 12%;
+    --popover-foreground: 330 100% 95%;
+    --primary: var(--vibrant-rose);
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 330 100% 80%;
+    --secondary: 320 15% 20%;
+    --secondary-foreground: 330 100% 90%;
+    --muted: 320 15% 20%;
+    --muted-foreground: 320 20% 65%;
+    --accent: var(--vibrant-rose);
+    --accent-foreground: 0 0% 100%;
+    --border: 320 15% 20%;
+    --input: 320 15% 20%;
+    --ring: var(--vibrant-rose);
+    
+    /* Dark mode garden tokens */
+    --garden-glow: 330 100% 80%;
+    --garden-shimmer: 330 80% 70%;
+    --mint-soft: 168 40% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-nunito;
+    background: linear-gradient(135deg, hsl(var(--petal-pink)), hsl(var(--blush-cream)));
+    min-height: 100vh;
+  }
+  
+  /* Typography Scale */
+  h1 {
+    @apply font-shadows text-5xl md:text-6xl lg:text-7xl font-normal;
+  }
+  
+  h2 {
+    @apply font-shadows text-3xl md:text-4xl lg:text-5xl font-normal;
+  }
+  
+  h3 {
+    @apply font-nunito text-2xl md:text-3xl font-bold;
+  }
+  
+  h4 {
+    @apply font-nunito text-xl md:text-2xl font-semibold;
+  }
+  
+  p {
+    @apply font-nunito text-base md:text-lg font-normal leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Garden Button System */
+  .btn-garden-primary {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-full font-nunito font-semibold text-lg;
+    @apply hover:shadow-[0_0_20px_hsl(var(--vibrant-rose)/0.7)] transition-all duration-300;
+    @apply active:scale-95 transform;
+  }
+  
+  .btn-garden-secondary {
+    @apply border-2 border-primary text-primary px-8 py-4 rounded-full;
+    @apply font-nunito font-semibold text-lg bg-background;
+    @apply hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+  
+  /* Garden Card System */
+  .card-garden {
+    @apply bg-card rounded-3xl shadow-[var(--shadow-garden)] border border-border/50;
+    @apply backdrop-blur-sm transition-all duration-500;
+    @apply hover:shadow-[var(--shadow-glow)] hover:scale-[1.02];
+  }
+  
+  /* Garden Progress Bar */
+  .progress-vine {
+    @apply relative overflow-hidden rounded-full bg-secondary h-3;
+  }
+  
+  .progress-vine-fill {
+    @apply h-full bg-gradient-to-r from-primary to-primary/80 rounded-full;
+    @apply relative overflow-hidden;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .progress-vine-fill::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent;
+    animation: shimmer 2s infinite;
+    transform: translateX(-100%);
+  }
+  
+  /* Garden Animations */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  
+  .bloom {
+    animation: bloom 1s ease-out forwards;
+  }
+  
+  /* Text Effects */
+  .text-garden-glow {
+    @apply text-primary;
+    text-shadow: 0 0 10px hsl(var(--vibrant-rose) / 0.5);
+  }
+  
+  .text-handwritten {
+    @apply font-caveat text-xl font-semibold;
+  }
+}
+
+@layer utilities {
+  /* Backdrop Effects */
+  .backdrop-garden {
+    backdrop-filter: blur(8px) saturate(150%);
+    background: hsl(var(--background) / 0.85);
+  }
+  
+  /* Spotlight Navigation Styles */
+  .spotlight-nav {
+    background: color-mix(in hsl, hsl(var(--card)), transparent 20%);
+    backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in hsl, hsl(var(--border)), transparent 50%);
+  }
+
+  .spotlight-nav::before,
+  .spotlight-nav::after,
+  .spotlight-nav ul.lit {
+    filter: url('#spotlight');
+  }
+
+  .spotlight-nav ul.content::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 100px;
+    pointer-events: none;
+    border: 1px solid white;
+    filter: url('#ambience') brightness(2);
+  }
+
+  .spotlight-nav ul.lit {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  .spotlight-nav [data-active='true'] {
+    opacity: 0.9;
+    color: hsl(var(--primary));
+  }
+
+  .spotlight-nav::after {
+    background: color-mix(in hsl, hsl(var(--card)), hsl(var(--foreground)) 10%);
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid color-mix(in hsl, hsl(var(--foreground)), transparent 90%);
+    z-index: -1;
+    border-radius: 100px;
+    opacity: 0.15;
+  }
+
+  .spotlight-nav::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid color-mix(in hsl, hsl(var(--foreground)), transparent 90%);
+    z-index: 2;
+    border-radius: 100px;
+  }
+
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Curved Header Bottom Border */
+  .header-curved-bottom::after {
+    display: none;
+  }
+
+  /* Advanced Menu Animation Styles */
+  .menu-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Expanding Circles Animation */
+  .expanding-circles {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .expanding-circles .circle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: hsl(var(--primary));
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  .expanding-circles .circle.extra {
+    opacity: 0;
+  }
+
+  .expanding-circles .circle.micro {
+    width: 4px;
+    height: 4px;
+    opacity: 0;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--vibrant-rose) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--vibrant-rose) / 0.6);
+  }
+}
+
+@keyframes bloom {
+  0% {
+    transform: scale(0.5) rotate(-10deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Scroll animations will be handled by framer-motion */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============= ANIMATED SECTIONS STYLES ============= */
+
+/* Animated sections specific styling */
+.animated-section {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+}
+
+.animated-section .outer,
+.animated-section .inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.animated-section .bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.animated-section .section-heading {
+  z-index: 999;
+  will-change: transform;
+  text-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 0 0 60px rgba(255, 105, 180, 0.3);
+}
+
+/* Header styling for animated sections */
+header.animated-sections-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 50;
+  height: 7rem;
+  font-size: clamp(0.66rem, 2vw, 1rem);
+  letter-spacing: 0.5em;
+}
+
+/* Mobile responsiveness for sections */
+@media (max-width: 768px) {
+  .animated-section .section-heading {
+    font-size: clamp(2rem, 10vw, 4rem) !important;
+  }
+  
+  header.animated-sections-header {
+    height: 5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+  }
+}
