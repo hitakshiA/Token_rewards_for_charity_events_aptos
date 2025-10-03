@@ -270,6 +270,8 @@ Please follow these steps to contribute:
 
 Please read our `CONTRIBUTING.md` for more details on our code of conduct and the process for submitting pull requests.
 
+Demo video link - https://drive.google.com/file/d/1xRf65PrSTGOnYUwyjgBSgAqaAjkYvowe/view?usp=sharing
+
 ## ⚖️ License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
